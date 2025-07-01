@@ -22,8 +22,8 @@ Upon contacting the affected user, they stated that they attempted to install "f
 Further investigation using **Microsoft Defender for Endpoint (MDE)** confirmed that the downloaded scripts did run. The following KQL query was used to verify script execution:
 
 Code snippet;
-````sql
-`let TargetHostname = "windows-target-1";
+``sql
+let TargetHostname = "windows-target-1";
 let ScriptNames = dynamic(["eicar.ps1", "exfiltratedata.ps1", "portscan.ps1", "pwncrypt.ps1"]);
 DeviceProcessEvents
 | where DeviceName == TargetHostname
